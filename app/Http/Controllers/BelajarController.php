@@ -25,7 +25,7 @@ class BelajarController extends Controller
     public function getOne()
     {
         $title = 'HALLO HABIS BELAJAR GITHUB NIH KITA';
-        $content = 'Saat ini kita belajar relasi One To One.';
+        $content = 'Saat ini kita belajar push dan pull!!! bray!!!';
         $users = \App\User::get();
             
         return view('index', compact('title', 'content', 'users'));
