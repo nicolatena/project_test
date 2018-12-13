@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(KendaraanTableSeeder::class);
         $this->call(ProfileSeeder::class);
+		// ini tambahan dari ocin
     }
 }
