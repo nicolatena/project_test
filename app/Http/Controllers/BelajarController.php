@@ -24,7 +24,7 @@ class BelajarController extends Controller
 
     public function getOne()
     {
-        $title = 'One To One Relationships ONPHPID.';
+        $title = 'HALLO HABIS BELAJAR GITHUB NIH KITA';
         $content = 'Saat ini kita belajar relasi One To One.';
         $users = \App\User::get();
             
