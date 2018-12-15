@@ -30,3 +30,5 @@ Route::get('user/{id}/{name?}', function ($id, $name ='Adissa') {
 Route::get('/belajar', 'BelajarController@index');
 Route::get('/belajar/html', 'BelajarController@getPage');
 Route::get('/one-to-one', 'BelajarController@getOne');
+Route::get('/one-to-many', 'BelajarController@getOneMany');
+Route::get('/many-to-one', 'BelajarController@getManyOne');

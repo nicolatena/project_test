@@ -10,26 +10,36 @@ class KendaraanTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+	{
+        Eloquent::unguard();
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        \App\Kendaraan::truncate();
+
     	\App\Kendaraan::insert([
     		[
-		      'nama_kendaraan'  => 'mobil',
-		      'jenis_kendaraan' => 'roda empat',
-		      'buatan'          => 'jepang',
-		      'created_at'      => \Carbon\Carbon::now('Asia/Jakarta')
+                'nama_kendaraan'  => 'mobil',
+                'jenis_kendaraan' => 'roda empat',
+                'buatan'          => 'jepang',
+                'created_at'      => \Carbon\Carbon::now('Asia/Jakarta'),
+                'id_user'         => 1
     		],
     		[
-		      'nama_kendaraan'  => 'motor',
-		      'jenis_kendaraan' => 'roda dua',
-		      'buatan'          => 'china',
-		      'created_at'      => \Carbon\Carbon::now('Asia/Jakarta')
+                'nama_kendaraan'  => 'motor',
+                'jenis_kendaraan' => 'roda dua',
+                'buatan'          => 'china',
+                'created_at'      => \Carbon\Carbon::now('Asia/Jakarta'),
+                'id_user'         => 2
     		],
     		[
-		      'nama_kendaraan'  => 'sepeda',
-		      'jenis_kendaraan' => 'roda dua',
-		      'buatan'          => 'china',
-		      'created_at'      => \Carbon\Carbon::now('Asia/Jakarta')
+                'nama_kendaraan'  => 'sepeda',
+                'jenis_kendaraan' => 'roda dua',
+                'buatan'          => 'china',
+                'created_at'      => \Carbon\Carbon::now('Asia/Jakarta'),
+                'id_user'         => 1
     		],
     	]);
-    }
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        Eloquent::reguard();
+	}
 }

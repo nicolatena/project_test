@@ -32,6 +32,13 @@ class User extends Authenticatable
      */
     public function Profile()
     {
-        return $this->hasOne('App\Profile', 'user_id');
+        return $this->hasOne('App\Profile', 'id_user');
     }
+
+    // Untuk mendapatkan data kendaraan yang berelasi dengan User.
+    public function kendaraan()
+    {
+        return $this->hasMany(Kendaraan::class);
+    }
+
 }

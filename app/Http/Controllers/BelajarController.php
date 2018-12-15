@@ -31,4 +31,26 @@ class BelajarController extends Controller
         return view('index', compact('title', 'content', 'users'));
     }
 
+    
+    public function getOneMany()
+    {
+        $title = 'One To Many and Many To One Relationships ONPHPID.';
+        $content = 'Saat ini kita belajar relasi One To Many and Many To One.';
+        $users = \App\User::all();
+
+        return view('one_to_many', compact('users', 'title', 'content'));
+    }
+
+    public function getmanyOne()
+    {
+        $title = 'One To Many and Many To One Relationships ONPHPID.';
+        $content = 'Saat ini kita belajar relasi One To Many and Many To One.';
+        $kendaraan = \App\Kendaraan::all();
+
+        return view('many_to_one', compact('kendaraan', 'title', 'content'));
+    }
+    
+
+
+
 }
